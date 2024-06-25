@@ -2,7 +2,7 @@ import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.Rectangle;
 
-public class coin {
+public class Coin {
 
     int x;
     int y;
@@ -12,7 +12,7 @@ public class coin {
 
     Rectangle hitBox;
 
-    public coin(int x, int y, int width, int height) {
+    public Coin(int x, int y, int width, int height) {
         this.x = x;
         startX = x;
         this.y = y;

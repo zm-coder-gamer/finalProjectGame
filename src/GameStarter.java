@@ -1,17 +1,34 @@
-import java.awt.Dimension;
-import java.awt.Toolkit;
-import static javax.swing.WindowConstants.DISPOSE_ON_CLOSE;
+import javax.swing.*;
+import java.awt.*;
 
-public class FinalProjectGame {
+public class GameStarter extends javax.swing.JFrame
+{
 
     public static void main(String[] args) {
-        MainFrame frame = new MainFrame();
+        GameStarter gameStarter = new GameStarter();
+        gameStarter.start();
+
+    }
+
+    private void start() {
+        JFrame frame = new JFrame();
+        GamePanel panel = getGamePanel(frame.getSize());
+        frame.add(panel);
+        frame.addKeyListener(new KeyChecker_1(panel));
         frame.setSize(700, 700);
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
         frame.setLocation((int)(screenSize.getWidth()/2 - frame.getSize().getWidth()/2), (int)(screenSize.getHeight()/2));
-        frame.setResizeable(false);
         frame.setTitle("Platformer Game");
         frame.setVisible(true);
         frame.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+    }
+    private GamePanel getGamePanel(Dimension size){
+        GamePanel panel = new GamePanel();
+        panel.setLocation(0,0);
+        panel.setSize(size);
+        panel.setBackground(Color.LIGHT_GRAY);
+        panel.setVisible(true);
+
+        return panel;
     }
 }

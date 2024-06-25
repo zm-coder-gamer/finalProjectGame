@@ -6,11 +6,11 @@ import java.util.ArrayList;
 public class Player {
     int wallIndex = 0;
     GamePanel panel;
-    static int x;
-    static int y;
-    static int width;
-    static int height;
-    static int step = 0;
+    int x;
+    int y;
+    int width;
+    int height;
+    int step = 0;
     int coincounter;
     double xspeed;
     double yspeed;
@@ -40,7 +40,7 @@ public class Player {
     }
 
 
-    public static void mainCharacterRight(Graphics2D gtd) {
+    public void mainCharacterRight(Graphics2D gtd) {
         gtd.setColor(Color.BLACK); //main body
         gtd.fillRect(x, y, width, height);
         gtd.setColor(Color.WHITE);
@@ -68,7 +68,7 @@ public class Player {
         gtd.fillRect(x + 26, y + 47, width - 46, height - 75);
     }
 
-    public static void mainCharacterLeft(Graphics2D gtd) {
+    public void mainCharacterLeft(Graphics2D gtd) {
         gtd.setColor(Color.BLACK); //main body
         gtd.fillRect(x, y, width, height);
         gtd.setColor(Color.WHITE);
@@ -163,8 +163,8 @@ public class Player {
         }
 
         // handle jump potion collision (both horizontal and vertical)
-        ArrayList<jumpPotion> jumpPotionsToRemove = new ArrayList<>();
-        for (jumpPotion jP : panel.jumpPotions) {
+        ArrayList<JumpPotion> jumpPotionsToRemove = new ArrayList<>();
+        for (JumpPotion jP : panel.jumpPotions) {
             if (hitBox.intersects(jP.hitBox)) {
                 jumpPotionsToRemove.add(jP);
                 System.out.println("Jump potion collected!");
@@ -187,8 +187,8 @@ public class Player {
             panel.reset();
         }
 
-        ArrayList<coin> coinsToRemove = new ArrayList<>();
-        for (coin c : panel.Coins) {
+        ArrayList<Coin> coinsToRemove = new ArrayList<>();
+        for (Coin c : panel.Coins) {
             if (hitBox.intersects(c.hitBox)) {
                 coinsToRemove.add(c);
                 System.out.println("coin collected!");
