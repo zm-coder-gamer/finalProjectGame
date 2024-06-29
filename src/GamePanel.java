@@ -150,6 +150,34 @@ public class GamePanel extends javax.swing.JPanel implements ActionListener {
             walls.add(new Wall(offset + 350, 600, s, s));
             walls.add(new Wall(offset + 400, 600, s, s));
             walls.add(new Wall(offset + 450, 600, s, s));
+
+            // 1st parkour
+            walls.add(new Wall(offset + 550, 350, s, s));
+            walls.add(new Wall(offset + 600, 450, s, s));
+            walls.add(new Wall(offset + 650, 350, s, s));
+            walls.add(new Wall(offset + 700, 450, s, s));
+
+            // 2nd parkour
+            walls.add(new Wall(offset + 1100, 500, s, s));
+            walls.add(new Wall(offset + 1300, 500, s, s));
+            walls.add(new Wall(offset + 1500, 500, s, s));
+            walls.add(new Wall(offset + 1650, 500, s, s));
+            walls.add(new Wall(offset + 1700, 400, s, s));
+            walls.add(new Wall(offset + 1750, 300, s, s));
+            walls.add(new Wall(offset + 1800, 200, s, s));
+            // 3rd parkour
+            walls.add(new Wall(offset + 2000, 350, s, s));
+            walls.add(new Wall(offset + 2050, 350, s, s));
+            walls.add(new Wall(offset + 2100, 350, s, s));
+            walls.add(new Wall(offset + 2150, 350, s, s));
+            walls.add(new Wall(offset + 2200, 350, s, s));
+            //4th parkour
+            walls.add(new Wall(offset + 2400, 350, s, s));
+            walls.add(new Wall(offset + 2450, 350, s, s));
+            walls.add(new Wall(offset + 2500, 350, s, s));
+            walls.add(new Wall(offset + 2550, 350, s, s));
+            walls.add(new Wall(offset + 2600, 350, s, s));
+            walls.add(new Wall(offset + 2650, 350, s, s));
         }
 
 
@@ -164,6 +192,8 @@ public class GamePanel extends javax.swing.JPanel implements ActionListener {
         }
         else if (player.wallIndex == 1) {
             Coins.add(new coin(625, 200, s, s));
+            Coins.add(new coin(offset + 1400, 400, s, s));
+            Coins.add(new coin(offset + 1200, 400, s, s));
         }
 }
 
@@ -181,7 +211,15 @@ public class GamePanel extends javax.swing.JPanel implements ActionListener {
             jumpPotions.add(new jumpPotion(offset + 2300, 150, s + 10, s));
         }
         else if (player.wallIndex == 1) {
-            jumpPotions.add(new jumpPotion(300, 300, s+10, s));
+            jumpPotions.add(new jumpPotion(300, 300, s + 10, s));
+            jumpPotions.add(new jumpPotion(750, 300, s + 10, s));
+
+            // underneath parkour
+            jumpPotions.add(new jumpPotion(offset + 2000, 400, s + 10, s));
+            jumpPotions.add(new jumpPotion(offset + 2150, 400, s + 10, s));
+            jumpPotions.add(new jumpPotion(offset + 2300, 400, s + 10, s));
+            jumpPotions.add(new jumpPotion(offset + 2300, 250, s + 10, s));
+            jumpPotions.add(new jumpPotion(offset + 2300, 150, s + 10, s));
         }
 
     }
@@ -207,6 +245,20 @@ public class GamePanel extends javax.swing.JPanel implements ActionListener {
         }
         else if (player.wallIndex == 1) {
             Enemies.add(new Enemy(offset + 350, 575, s, s));
+            Enemies.add(new Enemy(offset + 400, 575, s, s));
+
+
+            Enemies.add(new Enemy(offset + 650, 375, s, s));
+            int newOffset = offset;
+
+            Enemies.add(new Enemy(offset + 1650, 475, s, s));
+
+            //underneath spikes
+            Enemies.add(new Enemy(offset + 2000, 325, s, s));
+            Enemies.add(new Enemy(offset + 2050, 325, s, s));
+            Enemies.add(new Enemy(offset + 2100, 325, s, s));
+            Enemies.add(new Enemy(offset + 2150, 325, s, s));
+            Enemies.add(new Enemy(offset + 2200, 325, s, s));
         }
     }
 
