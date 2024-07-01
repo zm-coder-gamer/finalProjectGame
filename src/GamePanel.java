@@ -11,8 +11,8 @@ public class GamePanel extends javax.swing.JPanel implements ActionListener {
 
     Player player;
     List<Wall> walls = new ArrayList<>();
-    List<jumpPotion> jumpPotions = new ArrayList<>();
-    List<coin> Coins = new ArrayList<>();
+    List<JumpPotion> jumpPotions = new ArrayList<>();
+    List<Coin> Coins = new ArrayList<>();
 
     List<Enemy> Enemies = new ArrayList<>();
     List<EndSpike> EndSpikes = new ArrayList<>();
@@ -50,10 +50,10 @@ public class GamePanel extends javax.swing.JPanel implements ActionListener {
                 for (Wall wall : walls) {
                     wall.set(cameraX);
                 }
-                for (jumpPotion jP : jumpPotions) {
+                for (JumpPotion jP : jumpPotions) {
                     jP.set(cameraX);
                 }
-                for (coin c : Coins) {
+                for (Coin c : Coins) {
                     c.set(cameraX);
                 }
 
@@ -186,40 +186,40 @@ public class GamePanel extends javax.swing.JPanel implements ActionListener {
     public void makeCoin() {
         int s = 50;
         if (player.wallIndex == 0) {
-            Coins.add(new coin(625, 200, s, s));
-            Coins.add(new coin(offset + 1400, 400, s, s));
-            Coins.add(new coin(offset + 1200, 400, s, s));
+            Coins.add(new Coin(625, 200, s, s));
+            Coins.add(new Coin(offset + 1400, 400, s, s));
+            Coins.add(new Coin(offset + 1200, 400, s, s));
         }
         else if (player.wallIndex == 1) {
-            Coins.add(new coin(625, 200, s, s));
-            Coins.add(new coin(offset + 1400, 400, s, s));
-            Coins.add(new coin(offset + 1200, 400, s, s));
+            Coins.add(new Coin(625, 200, s, s));
+            Coins.add(new Coin(offset + 1400, 400, s, s));
+            Coins.add(new Coin(offset + 1200, 400, s, s));
         }
 }
 
     public void makeJumpPotion() {
         int s = 50;
         if (player.wallIndex == 0) {
-            jumpPotions.add(new jumpPotion(300, 300, s + 10, s));
-            jumpPotions.add(new jumpPotion(950, 300, s + 10, s));
+            jumpPotions.add(new JumpPotion(300, 300, s + 10, s));
+            jumpPotions.add(new JumpPotion(950, 300, s + 10, s));
 
             // underneath parkour
-            jumpPotions.add(new jumpPotion(offset + 2000, 400, s + 10, s));
-            jumpPotions.add(new jumpPotion(offset + 2150, 400, s + 10, s));
-            jumpPotions.add(new jumpPotion(offset + 2300, 400, s + 10, s));
-            jumpPotions.add(new jumpPotion(offset + 2300, 250, s + 10, s));
-            jumpPotions.add(new jumpPotion(offset + 2300, 150, s + 10, s));
+            jumpPotions.add(new JumpPotion(offset + 2000, 400, s + 10, s));
+            jumpPotions.add(new JumpPotion(offset + 2150, 400, s + 10, s));
+            jumpPotions.add(new JumpPotion(offset + 2300, 400, s + 10, s));
+            jumpPotions.add(new JumpPotion(offset + 2300, 250, s + 10, s));
+            jumpPotions.add(new JumpPotion(offset + 2300, 150, s + 10, s));
         }
         else if (player.wallIndex == 1) {
-            jumpPotions.add(new jumpPotion(300, 300, s + 10, s));
-            jumpPotions.add(new jumpPotion(750, 300, s + 10, s));
+            jumpPotions.add(new JumpPotion(300, 300, s + 10, s));
+            jumpPotions.add(new JumpPotion(750, 300, s + 10, s));
 
             // underneath parkour
-            jumpPotions.add(new jumpPotion(offset + 2000, 400, s + 10, s));
-            jumpPotions.add(new jumpPotion(offset + 2150, 400, s + 10, s));
-            jumpPotions.add(new jumpPotion(offset + 2300, 400, s + 10, s));
-            jumpPotions.add(new jumpPotion(offset + 2300, 250, s + 10, s));
-            jumpPotions.add(new jumpPotion(offset + 2300, 150, s + 10, s));
+            jumpPotions.add(new JumpPotion(offset + 2000, 400, s + 10, s));
+            jumpPotions.add(new JumpPotion(offset + 2150, 400, s + 10, s));
+            jumpPotions.add(new JumpPotion(offset + 2300, 400, s + 10, s));
+            jumpPotions.add(new JumpPotion(offset + 2300, 250, s + 10, s));
+            jumpPotions.add(new JumpPotion(offset + 2300, 150, s + 10, s));
         }
 
     }
@@ -289,10 +289,10 @@ public class GamePanel extends javax.swing.JPanel implements ActionListener {
         gtd.drawString("R", 564, 60);
         gtd.drawString("H", 639, 60);
 
-        for (jumpPotion jP : jumpPotions) {
+        for (JumpPotion jP : jumpPotions) {
             jP.draw(gtd);
         }
-        for (coin c : Coins) {
+        for (Coin c : Coins) {
             c.draw(gtd);
         }
 
