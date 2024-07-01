@@ -13,6 +13,7 @@ public class GameMaster extends javax.swing.JFrame {
         frame.setTitle("Platformer Game");
         frame.setVisible(true);
         frame.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+
     }
     public GamePanel getGamePanel(Dimension size){
         GamePanel panel = new GamePanel();
