@@ -153,9 +153,9 @@ public class GamePanel extends javax.swing.JPanel implements ActionListener {
 
             // 1st parkour
             walls.add(new Wall(offset + 550, 350, s, s));
-            walls.add(new Wall(offset + 600, 450, s, s));
-            walls.add(new Wall(offset + 650, 350, s, s));
-            walls.add(new Wall(offset + 700, 450, s, s));
+            walls.add(new Wall(offset + 650, 450, s, s));
+            walls.add(new Wall(offset + 750, 350, s, s));
+            walls.add(new Wall(offset + 850, 450, s, s));
 
             // 2nd parkour
             walls.add(new Wall(offset + 1100, 500, s, s));
@@ -201,7 +201,7 @@ public class GamePanel extends javax.swing.JPanel implements ActionListener {
         int s = 50;
         if (player.wallIndex == 0) {
             jumpPotions.add(new jumpPotion(300, 300, s + 10, s));
-            jumpPotions.add(new jumpPotion(750, 300, s + 10, s));
+            jumpPotions.add(new jumpPotion(950, 300, s + 10, s));
 
             // underneath parkour
             jumpPotions.add(new jumpPotion(offset + 2000, 400, s + 10, s));
