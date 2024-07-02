@@ -4,7 +4,7 @@ import java.awt.Rectangle;
 import java.util.ArrayList;
 
 public class Player {
-    int wallIndex = 0;
+    int wallIndex = 1;
     GamePanel panel;
     int x;
     int y;
