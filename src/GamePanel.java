@@ -181,8 +181,8 @@ public class GamePanel extends javax.swing.JPanel implements ActionListener {
         int s = 50;
         if (player.wallIndex == 0) {
             Coins.add(new Coin(625, 200, s, s));
-            Coins.add(new Coin(offset + 1200, 400, s, s));
-            Coins.add(new Coin(offset + 1400, 400, s, s));
+            Coins.add(new Coin(offset + 1200, 375, s, s));
+            Coins.add(new Coin(offset + 1400, 375, s, s));
         }
         else if (player.wallIndex == 1) {
             Coins.add(new Coin(600, 200, s, s));
@@ -243,7 +243,9 @@ public class GamePanel extends javax.swing.JPanel implements ActionListener {
 
 
             Enemies.add(new Enemy(offset + 750, 375, s, s));
-            int newOffset = offset;
+            Enemies.add(new Enemy(offset + 1200, 475, s, s));
+            Enemies.add(new Enemy(offset + 1400, 475, s, s));
+
 
             Enemies.add(new Enemy(offset + 1650, 475, s, s));
 
