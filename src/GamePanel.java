@@ -160,11 +160,11 @@ public class GamePanel extends javax.swing.JPanel implements ActionListener {
             walls.add(new Wall(offset + 1750, 300, s, s));
             walls.add(new Wall(offset + 1800, 200, s, s));
             // 3rd parkour
-            walls.add(new Wall(offset + 2000, 350, s, s));
-            walls.add(new Wall(offset + 2050, 350, s, s));
-            walls.add(new Wall(offset + 2100, 350, s, s));
-            walls.add(new Wall(offset + 2150, 350, s, s));
-            walls.add(new Wall(offset + 2200, 350, s, s));
+            walls.add(new Wall(offset + 2000, 325, s, s));
+            walls.add(new Wall(offset + 2050, 325, s, s));
+            walls.add(new Wall(offset + 2100, 325, s, s));
+            walls.add(new Wall(offset + 2150, 325, s, s));
+            walls.add(new Wall(offset + 2200, 325, s, s));
             //4th parkour
             walls.add(new Wall(offset + 2400, 350, s, s));
             walls.add(new Wall(offset + 2450, 350, s, s));
@@ -209,9 +209,9 @@ public class GamePanel extends javax.swing.JPanel implements ActionListener {
             jumpPotions.add(new JumpPotion(750, 300, s + 10, s));
 
             // underneath parkour
-            jumpPotions.add(new JumpPotion(offset + 2000, 400, s + 10, s));
-            jumpPotions.add(new JumpPotion(offset + 2150, 400, s + 10, s));
-            jumpPotions.add(new JumpPotion(offset + 2300, 400, s + 10, s));
+            jumpPotions.add(new JumpPotion(offset + 2000, 375, s + 10, s));
+            jumpPotions.add(new JumpPotion(offset + 2150, 375, s + 10, s));
+            jumpPotions.add(new JumpPotion(offset + 2300, 375, s + 10, s));
             jumpPotions.add(new JumpPotion(offset + 2300, 250, s + 10, s));
             jumpPotions.add(new JumpPotion(offset + 2300, 150, s + 10, s));
         }
@@ -250,11 +250,17 @@ public class GamePanel extends javax.swing.JPanel implements ActionListener {
             Enemies.add(new Enemy(offset + 1650, 475, s, s));
 
             //underneath spikes
-            Enemies.add(new Enemy(offset + 2000, 325, s, s));
-            Enemies.add(new Enemy(offset + 2050, 325, s, s));
-            Enemies.add(new Enemy(offset + 2100, 325, s, s));
-            Enemies.add(new Enemy(offset + 2150, 325, s, s));
-            Enemies.add(new Enemy(offset + 2200, 325, s, s));
+            Enemies.add(new Enemy(offset + 2000, 300, s, s));
+            Enemies.add(new Enemy(offset + 2050, 300, s, s));
+            Enemies.add(new Enemy(offset + 2100, 300, s, s));
+            Enemies.add(new Enemy(offset + 2150, 300, s, s));
+            Enemies.add(new Enemy(offset + 2200, 300, s, s));
+
+            Enemies.add(new Enemy(offset + 2000, 625, s, s));
+            Enemies.add(new Enemy(offset + 2050, 625, s, s));
+            Enemies.add(new Enemy(offset + 2100, 625, s, s));
+            Enemies.add(new Enemy(offset + 2150, 625, s, s));
+            Enemies.add(new Enemy(offset + 2200, 625, s, s));
         }
     }
 
