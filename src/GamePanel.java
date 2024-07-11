@@ -171,9 +171,41 @@ public class GamePanel extends javax.swing.JPanel implements ActionListener {
             walls.add(new Wall(offset + 2550, 350, s, s));
             walls.add(new Wall(offset + 2600, 350, s, s));
             walls.add(new Wall(offset + 2650, 350, s, s));
-
         }
+        else if (player.wallIndex == 2) {
+            walls.add(new Wall(offset + 200, 600, s, s));
+            walls.add(new Wall(offset + 250, 600, s, s));
+            walls.add(new Wall(offset + 300, 600, s, s));
+            walls.add(new Wall(offset + 350, 600, s, s));
+            walls.add(new Wall(offset + 400, 600, s, s));
+            walls.add(new Wall(offset + 450, 600, s, s));
+            // 1st parkour
+            walls.add(new Wall(offset + 650, 400, s, s));
+            walls.add(new Wall(offset + 700, 400, s, s));
+            walls.add(new Wall(offset + 750, 400, s, s));
+            walls.add(new Wall(offset + 800, 400, s, s));
 
+            // 2nd parkour
+            walls.add(new Wall(offset + 1100, 500, s, s));
+            walls.add(new Wall(offset + 1300, 500, s, s));
+            walls.add(new Wall(offset + 1500, 500, s, s));
+            walls.add(new Wall(offset + 1650, 500, s, s));
+            walls.add(new Wall(offset + 1700, 400, s, s));
+
+            // 3rd parkour
+            walls.add(new Wall(offset + 2000, 325, s, s));
+            walls.add(new Wall(offset + 2050, 325, s, s));
+            walls.add(new Wall(offset + 2100, 325, s, s));
+            walls.add(new Wall(offset + 2150, 325, s, s));
+            walls.add(new Wall(offset + 2200, 325, s, s));
+            //4th parkour
+            walls.add(new Wall(offset + 2400, 350, s, s));
+            walls.add(new Wall(offset + 2450, 350, s, s));
+            walls.add(new Wall(offset + 2500, 350, s, s));
+            walls.add(new Wall(offset + 2550, 350, s, s));
+            walls.add(new Wall(offset + 2600, 350, s, s));
+            walls.add(new Wall(offset + 2650, 350, s, s));
+        }
 
 
     }
