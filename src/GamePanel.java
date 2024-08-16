@@ -172,6 +172,7 @@ public class GamePanel extends javax.swing.JPanel implements ActionListener {
             walls.add(new Wall(offset + 2600, 350, s, s));
             walls.add(new Wall(offset + 2650, 350, s, s));
         }
+        // LEVEL 3
         else if (player.wallIndex == 2) {
             walls.add(new Wall(offset + 200, 600, s, s));
             walls.add(new Wall(offset + 250, 600, s, s));
